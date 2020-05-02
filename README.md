@@ -8,6 +8,7 @@ REST API for the interaction with the Internet shop. Server provides the followi
 * Print the product
 * Edit the product
 
-## Postman
-You can check Postman Schema [here](https://documenter.getpostman.com/view/10631129/SzRw3rXS).
+## Usage
+* docker-compose build
+* docker-compose up
 
