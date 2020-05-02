@@ -1,4 +1,5 @@
-FROM python:latest
+FROM python:3.7
+WORKDIR /server/
 
 ADD requirements.txt /app/
 RUN apt-get update \
@@ -7,8 +8,6 @@ RUN apt-get update \
     && pip install --upgrade pip \ 
     && pip install -r /app/requirements.txt
 
-ADD server.py /server/
-ADD database.py /server/
+ADD *.py /server/
 
 
-WORKDIR /server/

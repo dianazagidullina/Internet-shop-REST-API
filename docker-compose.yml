@@ -6,4 +6,11 @@ services:
     command: python ./server.py
     ports:
       - 1234:1234
+    depends_on:
+      - mongo
     restart: always
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"

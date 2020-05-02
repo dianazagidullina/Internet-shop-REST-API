@@ -6,14 +6,11 @@ from database import database
 
 db = database()
 
-try:
-    db.create_table()
-except:
-    pass
 
 
 class NewProduct(tornado.web.RequestHandler):
     def post(self):
+        global id
         data = json.loads(self.request.body)
 
         if 'name' not in data.keys() or 'category' not in data.keys():
