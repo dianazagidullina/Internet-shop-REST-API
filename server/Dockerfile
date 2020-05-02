@@ -8,9 +8,7 @@ RUN apt-get update \
     && pip install -r /app/requirements.txt
 
 ADD server.py /server/
+ADD database.py /server/
 
 
 WORKDIR /server/
-
-
-

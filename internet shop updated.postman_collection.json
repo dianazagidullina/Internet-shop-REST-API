@@ -1,0 +1,1310 @@
+{
+	"info": {
+		"_postman_id": "06659f22-45ed-4a7c-bfcd-3cd52bc0d5fe",
+		"name": "internet shop updated",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET products (empty)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1234/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create 400 (need name)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\": \"6\",\n \"category\": \"furniture\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:27:53 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						}
+					],
+					"cookie": [],
+					"body": "Set the name of the product."
+				},
+				{
+					"name": "create 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"bed\",\n \"id\": \"1\",\n \"category\": \"furniture\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:44:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "GET products (empty)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1234/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:57:49 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"493439eb947f50592ebecbac0b67d4d034770f58\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"products\": []\n}"
+				},
+				{
+					"name": "http://localhost:1234/products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1234/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 19:43:14 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"493439eb947f50592ebecbac0b67d4d034770f58\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"products\": []\n}"
+				},
+				{
+					"name": "create 400 (need name and category)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\": \"0\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:30:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "Set the name and the category of the product."
+				},
+				{
+					"name": "create 400 (need id)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"bad\",\n \"category\": \"furniture\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:27:23 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "Set the id of the product."
+				},
+				{
+					"name": "create 400 (wrong id)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"bed\",\n \"id\": \"1\",\n \"category\": \"furniture\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:46:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						}
+					],
+					"cookie": [],
+					"body": "There is already product with such id."
+				},
+				{
+					"name": "create 400 (need category)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"bad\",\n \"id\": \"0\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Mar 2020 22:30:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						}
+					],
+					"cookie": [],
+					"body": "Set the category of the product."
+				}
+			]
+		},
+		{
+			"name": "GET products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1234/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1234/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:07:31 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"923101d3bef5ca6d5d1eeb99eb1c158a2ec8cbd0\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"products\": [\n        [\n            5,\n            \"macbook\",\n            \"laptop\"\n        ],\n        [\n            6,\n            \"iphone 11 pro\",\n            \"phone\"\n        ],\n        [\n            7,\n            \"iphone 8\",\n            \"phone\"\n        ]\n    ]\n}"
+				},
+				{
+					"name": "GET products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1234/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:58:53 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"fb3b6880c98bd9d62cf9b05dce8ff4a7a469015e\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"products\": [\n        [\n            1,\n            \"macbook\",\n            \"laptop\"\n        ],\n        [\n            2,\n            \"iphone 8\",\n            \"phone\"\n        ],\n        [\n            3,\n            \"iphone 11 pro\",\n            \"phone\"\n        ]\n    ]\n}"
+				},
+				{
+					"name": "GET products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1234/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:13:42 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"01af6289c1905b52e628b4e477daba4b1e15a877\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"products\": [\n        [\n            6,\n            \"iphone 11 pro\",\n            \"phone\"\n        ],\n        [\n            7,\n            \"iphone 8\",\n            \"phone\"\n        ],\n        [\n            8,\n            \"table\",\n            \"furniture\"\n        ]\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "POST product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"macbook\",\n \"category\": \"laptop\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:1234/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"macbook\",\n \"category\": \"laptop\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:58:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"id\": 1\n}"
+				},
+				{
+					"name": "POST product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"macbook\",\n \"category\": \"laptop\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:04:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"id\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "POST product (error)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"macbook\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:1234/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST product (error)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"macbook\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:05:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"error_message\": \"missing product name or category\"\n}"
+				},
+				{
+					"name": "POST product (error)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"macbook\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:12:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"error_message\": \"missing product name or category\"\n}"
+				},
+				{
+					"name": "POST product (error)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"macbook\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:59:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"error_message\": \"missing product name or category\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1234/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:09:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\"\n}"
+				},
+				{
+					"name": "DELETE product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1234/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:59:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"iphone 7\",\n \"category\": \"phone\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:1234/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"iphone 7\",\n \"category\": \"phone\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:14:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\"\n}"
+				},
+				{
+					"name": "PUT product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"iphone 11\",\n \"category\": \"phone\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 12:59:54 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT product (error)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"iphone 7\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:1234/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT product (error)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"iphone 7\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:1234/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 13:00:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"error_message\": \"missing product id or name or category\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1234/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 20:19:16 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"873bd6a9614856e5a33189d99fb229b7796176ba\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"product\": [\n        6,\n        \"iphone 7\",\n        \"phone\"\n    ]\n}"
+				},
+				{
+					"name": "GET product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1234/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Apr 2020 13:00:24 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"48a19b79ccf5afcccc6b184a16723958d3d340db\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ok\",\n    \"product\": [\n        1,\n        \"macbook\",\n        \"laptop\"\n    ]\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
