@@ -1,14 +1,26 @@
 version: "3"
 
 services:
+
   server:
-    build: server/
-    command: python ./server.py
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    command: python ./server/server.py
     ports:
-      - 1234:1234
+      - 1111:1111
     depends_on:
       - mongo
+      - authorization
     restart: always
+
+
+  authorization:
+    build: authorization/
+    command: python ./server.py
+    ports:
+      - 2222:2222
+
 
   mongo:
     image: mongo

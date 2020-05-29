@@ -6,7 +6,7 @@ class database:
     def __init__(self):
         self.client = MongoClient(MONGO_HOST, MONGO_PORT)
         self.db = self.client.db
-        self.table = self.db.items
+        self.table = self.db.products
         print("creating database...")
 
 
@@ -52,7 +52,6 @@ class database:
             return response
         product["_id"] = str(product["_id"])
         response = {'result': 'ok', 'product': product}
-
         return response
 
     def get_all(self):

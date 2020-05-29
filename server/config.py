@@ -1,2 +1,3 @@
-MONGO_HOST= "mongo"
+MONGO_HOST = "mongo"
 MONGO_PORT = 27017
+SERVER_PORT = "1111"
